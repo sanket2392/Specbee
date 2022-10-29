@@ -25,14 +25,12 @@ class componentLocation extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $node       = \Drupal::routeMatch()->getParameter('node');
-    if ($node instanceof \Drupal\node\NodeInterface) {
-      $config   = \Drupal::config('specbee.adminsettings');
-      $country  = $config->get('country');
-      $city     = $config->get('city');
-      $datetime = $this->timeService->getTime();
-    }
-
+    $node     = \Drupal::routeMatch()->getParameter('node');
+    $config   = \Drupal::config('specbee.adminsettings');
+    $country  = $config->get('country');
+    $city     = $config->get('city');
+    $datetime = $this->timeService->getTime();
+    
     $data = array(
       '#theme' => 'component_location',
       'title' => isset($node) ? $node->getTitle() : 'Site Location and Time',
