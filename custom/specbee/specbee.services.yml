@@ -1,0 +1,3 @@
+services:
+ specbee.currentTime:
+    class: Drupal\specbee\CurrentTime

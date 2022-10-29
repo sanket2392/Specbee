@@ -1,0 +1,25 @@
+<?php
+use Drupal\specbee\Plugin\Block\componentLocation;
+
+/**
+ * @file
+ * Contains specbee.module.
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function specbee_theme($existing, $type, $theme, $path) {
+  $response = new componentLocation();
+  $title    = $response->build()['title'];
+  $country  = $response->build()['country'];
+  $city     = $response->build()['city'];
+  $datetime = $response->build()['time'];
+ 
+  return [
+    'component_location' => [
+      'variables' => ['title' => $title, 'country' => $country, 'city' => $city, 'time' => $datetime]
+    ]
+  ];
+}
