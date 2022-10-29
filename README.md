@@ -6,4 +6,8 @@ Steps to follow :
 4. Move custom module folder inside the newly generated "web/modules" folder by composer
 5. Install custom module Specbee using drush command or CMS Extend tab
 6. Go to "/admin/config/specbee/adminsettings" to set ADMIN CONFIGURATION form.
-7. Once ADMIN CONFIGURATION form saved, click on Site Location menu to see the Site location and the current time for the location 
+7. Once ADMIN CONFIGURATION form saved, click on Site Location menu to see the Site location and the current time for the location
+
+Drupal CMS credentials:
+Username : admin
+Password : Admin@123
